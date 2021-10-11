@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <div id="root">Which will show?</div>
+    <!-- Base react Similarly to how we get Jquery running in our applications, we are linking up with the React Library in a similar way. -->
+    <script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <!-- reactDOM Remember how we said React is Agnostic? Well that means it can be used in a variety of places. We will be focused on the DOM-->
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <!-- Babel our transpiler... Allows our application to convert JSX and ES6 syntax into simpler HTML and ES5 syntax that the browser can understand  -->
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+
+    <script type="text/babel">
+        class App extends React.Component {
+            render() { //JSX JavaScript XML --- XML is a mark-up language that has a high degree of customization
+                //JSX looks a lot like HTML, but it does have some key differences one of which being that we can write JS right inside of our mark-up!
+                return <h1>Hello World!{5 + 5}</h1>
+            }
+        }
+        ReactDOM.render(<App />, document.getElementById('root'))
+    </script>
+
+
+</body>
+
+</html>
